@@ -10,7 +10,7 @@ Claude Code プロジェクトスキルのソースを管理する。
 | `propose` | デプロイ済み | `_review.md` をもとに修正案を作成し `_proposal.md` を生成する | — |
 | `decision-add` | デプロイ済み | `docs/records/` に `0001-xxx.md` 形式でADRを新規作成する | — |
 | `monorepo-init` | デプロイ済み | 新規プロジェクトにテンプレート構造を展開する | — |
-| `package-add` | 要修正 | 既存モノレポに新しいパッケージを追加する（degit ベースに変更予定） | dec-003 |
+| `package-add` | デプロイ済み | 既存モノレポに新しいパッケージを追加する | dec-003 |
 | `template-sync` | 未作成 | テンプレートの変更を既存プロジェクトに同期する | — |
 
 ## デプロイ手順

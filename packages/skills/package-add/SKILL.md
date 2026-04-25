@@ -14,13 +14,17 @@ origin: local
 
 1. ユーザーが `/package-add <パッケージ名>` を実行する（パッケージ名省略時はユーザーに確認する）
 2. `packages/<パッケージ名>/` が既に存在する場合は中止する
-3. `packages/package-a/` をテンプレートとして `packages/<パッケージ名>/` にコピーする
-4. プレースホルダ（`__PACKAGE_NAME__`）をパッケージ名で置換する（対象: コピーした全 `.md` ファイル）
+3. `npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template/packages/package-a packages/<パッケージ名>` でテンプレートを展開する
+4. プレースホルダ（`__PACKAGE_NAME__`）をパッケージ名で置換する（対象: 全 `.md` ファイル）
 5. 作成したパッケージのパスをユーザーに通知する
 
 ## Template Source
 
-`packages/package-a/` をコピー元として使用する。
+```
+npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template/packages/package-a packages/<パッケージ名>
+```
+
+- `.git/` を含まず `package-a/` の内容だけが展開される
 
 ## Notes
 
