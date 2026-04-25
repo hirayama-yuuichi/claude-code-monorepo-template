@@ -11,7 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```
 packages/template/               ← 配布するモノレポテンプレートの実体
-decisions/          ← 設計判断ログ（ADR）
+docs/records/          ← 設計判断ログ（ADR）
 plan.md             ← 正本（パッケージ横断の計画）
 plan_review.md      ← 批判ファイル（一時）
 plan_proposal.md    ← 提案ファイル（一時）
@@ -35,14 +35,14 @@ plan_proposal.md    ← 提案ファイル（一時）
 | やること追加 | `tasks/backlog.md` |
 | 横断的な計画変更 | `tasks/plan.md` |
 | パッケージ固有の計画 | `packages/<pkg>/plan.md` |
-| 設計判断ログ | `docs/decisions/XXXX-*.md` |
+| 設計判断ログ | `docs/docs/records/XXXX-*.md` |
 | アーキテクチャ変更 | `docs/architecture.md` |
 
 ## Claude 提案の採用ループ
 
-重要な提案を受けるときは必ずこのループを踏む（`decisions/0001-提案の採用ループ.md` 参照）。
+重要な提案を受けるときは必ずこのループを踏む（`docs/records/0001-提案の採用ループ.md` 参照）。
 
 
-## decisions/ の使い方
+## docs/records/ の使い方
 
-`plan.md` の Why を変更するとき、またはアーキテクチャの方針を変えるときは、先に `decisions/` に理由を記録してから変更する。
+`plan.md` の Why を変更するとき、またはアーキテクチャの方針を変えるときは、先に `docs/records/` に理由を記録してから変更する。

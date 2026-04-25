@@ -29,4 +29,4 @@ origin: local
 - 元ファイルは変更しない。比較はユーザーが IDE で行う
 - 採用する場合: 元ファイルを `_proposal.md` の内容で更新し、`_review.md` と `_proposal.md` を `_old/` へ移動する
 - 却下する場合: 却下理由を Claude に伝えて `/critique` からやり直す
-- 詳細: `decisions/0001-提案の採用ループ.md`
+- 詳細: `docs/records/0001-提案の採用ループ.md`
