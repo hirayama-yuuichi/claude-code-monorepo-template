@@ -9,26 +9,17 @@ Claude Code プロジェクトスキルのソースを管理する。
 | `critique` | デプロイ済み | 対象ファイルを別インスタンスで批判し `_review.md` を生成する |
 | `propose` | デプロイ済み | `_review.md` をもとに修正案を作成し `_proposal.md` を生成する |
 | `decision-add` | デプロイ済み | `decisions/` に `0001-xxx.md` 形式でADRを新規作成する |
-| `monorepo-init` | 未作成 | 新規プロジェクトにテンプレート構造を展開する |
-| `package-add` | 未作成 | 既存モノレポに新しいパッケージを追加する |
+| `monorepo-init` | デプロイ済み | 新規プロジェクトにテンプレート構造を展開する |
+| `package-add` | デプロイ済み | 既存モノレポに新しいパッケージを追加する |
 | `template-sync` | 未作成 | テンプレートの変更を既存プロジェクトに同期する |
 
 ## デプロイ手順
 
-`packages/skills/<スキル名>/` の内容をプロジェクトの `.claude/skills/<スキル名>/` にコピーする。
-
 ```bash
-cp -r packages/skills/<スキル名> .claude/skills/
+bash packages/skills/deploy.sh
 ```
 
-全スキルを一括デプロイ：
-
-```bash
-for skill in packages/skills/*/; do
-  name=$(basename "$skill")
-  cp -r "$skill" .claude/skills/
-done
-```
+`packages/skills/` の全スキルを `.claude/skills/` に一括コピーする。
 
 ## ファイル構成
 
