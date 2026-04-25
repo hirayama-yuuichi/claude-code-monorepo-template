@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## このリポジトリの目的
 
-モノレポテンプレートの設計・管理リポジトリ。`packages/root/` が運用されるテンプレートの実体で、
-このリポジトリ自体は「`packages/root/`」以下のテンプレートを使い、各プロジェクトを運用するためのskillやコマンドなどの・設計・計画・を行う場所。
+モノレポテンプレートの設計・管理リポジトリ。`packages/template/` が運用されるテンプレートの実体で、
+このリポジトリ自体は「`packages/template/`」以下のテンプレートを使い、各プロジェクトを運用するためのskillやコマンドなどの・設計・計画・を行う場所。
 
 ## ファイル構成
 
 ```
-packages/root/               ← 配布するモノレポテンプレートの実体
+packages/template/               ← 配布するモノレポテンプレートの実体
 decisions/          ← 設計判断ログ（ADR）
 plan.md             ← 正本（パッケージ横断の計画）
 plan_review.md      ← 批判ファイル（一時）
@@ -18,7 +18,7 @@ plan_proposal.md    ← 提案ファイル（一時）
 モノレポ案.md        ← テンプレート設計方針のメモ
 ```
 
-## テンプレート（packages/root/）の構造方針
+## テンプレート（packages/template/）の構造方針
 
 `モノレポ案.md` に全方針が書かれている。要点：
 
