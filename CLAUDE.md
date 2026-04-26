@@ -29,14 +29,14 @@ plan_proposal.md    ← 提案ファイル（一時）
 
 ## Claude Code への出力ルール
 
-| 出力の種類 | 書く場所 |
-|---|---|
-| 新規アイデア | `ideas/ideas.md` |
-| やること追加 | `tasks/backlog.md` |
-| 横断的な計画変更 | `tasks/plan.md` |
-| パッケージ固有の計画 | `packages/<pkg>/plan.md` |
-| 設計判断ログ | `docs/docs/records/XXXX-*.md` |
-| アーキテクチャ変更 | `docs/architecture.md` |
+| 出力の種類 | 書く場所 | 書き方 |
+|---|---|---|
+| 新規アイデア | `ideas/ideas.md` | |
+| やること追加 | `tasks/backlog.md` | 見出し1行のみ（詳細は `docs/records/` で検討）。完了したら `MM/DD` 見出し下に「済」付きで移動。増えたら `backlog_old.md` へ退避 |
+| 横断的な計画変更 | `tasks/plan.md` | |
+| パッケージ固有の計画 | `packages/<pkg>/plan.md` | |
+| 設計判断ログ | `docs/records/XXXX-*.md` | |
+| アーキテクチャ変更 | `docs/architecture.md` | |
 
 ## Claude 提案の採用ループ
 
