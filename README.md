@@ -4,18 +4,14 @@
 
 > このプロジェクトは [claude-code-monorepo-template](https://github.com/hirayama-yuuichi/claude-code-monorepo-template) のモノレポ構造を採用しています。使い方はgitを参照してください。
 
-## パッケージ一覧
 
-| パッケージ | 役割 |
-|---|---|
-| [template](./packages/template/) | 配布するモノレポテンプレートの実体 |
-| [skills](./packages/skills/) | Claude Code スキルのソースファイル群 |
+このリポジトリは
+・モノレポ共通化
+・意思決定の過程の見えるか、簡素化
+・上記作業の他者への伝達
+をめざします。
 
-## 最短の使い方
+方法は
+「packages」配下を「モノレポテンプレート」として別レポジトリに配置し、それをインストールし使用することで
+「モノレポテンプレート」を成長させていきます
 
-```bash
-# スキルをデプロイ
-bash packages/skills/deploy.sh
-```
-
-詳細は [docs/](./docs/) を参照。
