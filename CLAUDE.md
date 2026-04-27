@@ -19,7 +19,7 @@ in-progress/plan/plan.md    ← 正本（パッケージ横断の計画）
 
 ## テンプレート（packages/template/）の構造方針
 
-`docs/モノレポ案.md` に全方針が書かれている。要点：
+`docs/architecture.md` に全方針が書かれている。要点：
 
 - `docs/` — 完成・確定した情報のみ（architecture, setup 等）
 - `in-progress/` — 進行中のすべて（アイデア・backlog・計画・ADR）
@@ -30,7 +30,7 @@ in-progress/plan/plan.md    ← 正本（パッケージ横断の計画）
 | 出力の種類 | 書く場所 | 書き方 |
 |---|---|---|
 | 新規アイデア | `in-progress/ideas.md` | |
-| やること追加 | `in-progress/backlog.md` | 見出し1行のみ（詳細は `in-progress/records/` で検討）。完了したら `MM/DD` 見出し下に「済」付きで移動。増えたら `backlog_old.md` へ退避 |
+| やること追加 | `in-progress/backlog.md` | 直近やるタスクのみ（全量管理は ADR のステータスフィールドで行う）。見出し1行のみ（詳細は `in-progress/records/` で検討）。完了したら `MM/DD` 見出し下に「済」付きで移動。増えたら `backlog_old.md` へ退避 |
 | 横断的な計画変更 | `in-progress/plan/plan.md` | |
 | パッケージ固有の計画 | `packages/<pkg>/plan.md` | |
 | 設計判断ログ | `in-progress/records/XXXX-*.md` | |
