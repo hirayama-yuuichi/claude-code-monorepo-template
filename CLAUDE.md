@@ -40,6 +40,13 @@ in-progress/plan/plan.md    ← 正本（パッケージ横断の計画）
 
 `packages/skills/` が正本。スキルを編集したら `packages/skills/deploy.sh` を実行して `.claude/skills/` に同期する。
 
+## テンプレート変更時のルール
+
+`packages/template/` の構造・内容を変更したときは、以下も合わせて更新する：
+
+- `packages/template/docs/` — 変更内容を反映
+- `packages/skills/` — パス参照や手順が変わる場合は更新し、`deploy.sh` で同期
+
 ## Claude 提案の採用ループ
 
 重要な提案を受けるときは必ずこのループを踏む（`in-progress/records/0001-提案の採用ループ.md` 参照）。
