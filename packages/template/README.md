@@ -2,8 +2,6 @@
 
 [一行で何をするリポジトリか]
 
-> このプロジェクトは [claude-code-monorepo-template](https://github.com/hirayama-yuuichi/claude-code-monorepo-template) のモノレポ構造を採用しています。使い方はgitを参照してください
-
 ## パッケージ一覧
 
 | パッケージ | 役割 |

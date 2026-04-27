@@ -40,7 +40,7 @@ aws sso login --profile <YOUR_PROFILE>
 ```bash
 export CLAUDE_CODE_USE_BEDROCK=1
 export AWS_REGION=ap-northeast-1
-export ANTHROPIC_DEFAULT_SONNET_MODEL=us.anthropic.claude-sonnet-4-6
+claude 
 ```
 
 この設定は現在のシェルセッションでのみ有効です。
