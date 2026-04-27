@@ -1,6 +1,6 @@
 ---
 name: records-add
-description: docs/records/ に 0001-xxx.md 形式で記録を新規作成する
+description: in-progress/records/ に 0001-xxx.md 形式で記録を新規作成する
 origin: local
 ---
 
@@ -8,20 +8,20 @@ origin: local
 
 ## When to Use
 
-設計判断・アーキテクチャ変更・方針決定・評価・整備記録など、`docs/records/` に残したい記録を追加するとき。
+設計判断・アーキテクチャ変更・方針決定・評価・整備記録など、`in-progress/records/` に残したい記録を追加するとき。
 
 ## How It Works
 
 1. ユーザーが `/records-add <タイトル>` を実行する（タイトル省略時はユーザーに確認する）
-2. `docs/records/` の既存ファイルから次の連番を採番する（例: 0001, 0002 が存在する場合は 0003）
-3. `docs/records/XXXX-<タイトル>.md` を作成する
+2. `in-progress/records/` の既存ファイルから次の連番を採番する（例: 0001, 0002 が存在する場合は 0003）
+3. `in-progress/records/XXXX-<タイトル>.md` を作成する
 4. 必須項目（背景・判断）が未記入の場合は保存前にユーザーに確認を求める
 5. 作成したファイルのパスをユーザーに通知する
-6. 決定事項に実装タスクが含まれる場合、CLAUDE.md のフォーマット仕様に従って `tasks/backlog.md` に見出し1行で直接追記する（記録番号を付記）
+6. 決定事項に実装タスクが含まれる場合、CLAUDE.md のフォーマット仕様に従って `in-progress/backlog.md` に見出し1行で直接追記する（記録番号を付記）
 
 ## Output
 
-- `docs/records/XXXX-<タイトル>.md` — 記録ファイル
+- `in-progress/records/XXXX-<タイトル>.md` — 記録ファイル
 
 ## File Format
 
@@ -59,5 +59,5 @@ origin: local
 ## Notes
 
 - 連番が競合する場合は次の空き番号を自動で採番する
-- `docs/records/` が存在しない場合は作成してから続行
+- `in-progress/records/` が存在しない場合は作成してから続行
 - 状態は `議論中` → `採用` / `却下` / `記録` に変化する。状態変更時はファイルを直接編集する
