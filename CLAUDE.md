@@ -30,7 +30,7 @@ in-progress/plan/plan.md    ← 正本（パッケージ横断の計画）
 | 出力の種類 | 書く場所 | 書き方 |
 |---|---|---|
 | 新規アイデア | `in-progress/ideas.md` | |
-| やること追加 | `in-progress/backlog.md` | 人間が管理する作業リスト。records に収まらないタスクも含めてよい。見出し1行のみ（詳細は `in-progress/records/` で検討）。完了したら `MM/DD` 見出し下に「済」付きで移動。増えたら `backlog_old.md` へ退避 |
+| やること追加 | `in-progress/backlog.md` | 人間が管理する作業リスト。records に収まらないタスクも含めてよい。見出し1行のみ（詳細は `in-progress/records/` で検討）。完了したら `YYYY/MM/DD` 見出し下に「済」付きで移動。増えたら `backlog_old.md` へ退避 |
 | 横断的な計画変更 | `in-progress/plan/plan.md` | |
 | パッケージ固有の計画 | `packages/<pkg>/plan.md` | |
 | 設計判断ログ | `in-progress/records/XXXX-*.md` | |

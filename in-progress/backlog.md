@@ -10,6 +10,8 @@
 - rec-0014: `packages/template/docs/architecture.md` の内容を充実させる
 - rec-0013: 仕組みの説明をどこに配置するか検討・実装
 - rec-0012: 作業・思考過程の共通化の検討・実装
-- rec-0011: docs 記載方針の確定と `docs/` 更新
 - rec-0003: スキルのテンプレート参照の設計判断を完了させる
 - rec-0016:  `packages/readme.md` の内容を精査する
+
+2026/4/28
+- 済 rec-0011: docs 記載方針の確定と `docs/` 更新
