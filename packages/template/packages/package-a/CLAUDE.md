@@ -14,7 +14,7 @@ plan.md    ← このパッケージ内の計画（横断の話は in-progress/p
 
 | 出力の種類 | 書く場所 |
 |---|---|
-| パッケージ固有の計画 | `plan.md` |
+| パッケージ固有の計画 | `in-progress/plan/package-a.md` |
 | API仕様 | `docs/api.md` |
 | データ構造 | `docs/data.md` |
 | ビジネスルール | `docs/rules.md` |
