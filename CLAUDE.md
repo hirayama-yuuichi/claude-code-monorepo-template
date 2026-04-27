@@ -36,6 +36,10 @@ in-progress/plan/plan.md    ← 正本（パッケージ横断の計画）
 | 設計判断ログ | `in-progress/records/XXXX-*.md` | |
 | アーキテクチャ変更 | `docs/architecture.md` | |
 
+## スキルの管理
+
+`packages/skills/` が正本。スキルを編集したら `packages/skills/deploy.sh` を実行して `.claude/skills/` に同期する。
+
 ## Claude 提案の採用ループ
 
 重要な提案を受けるときは必ずこのループを踏む（`in-progress/records/0001-提案の採用ループ.md` 参照）。
