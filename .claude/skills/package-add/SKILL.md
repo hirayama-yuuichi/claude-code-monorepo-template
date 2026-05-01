@@ -15,8 +15,7 @@ origin: local
 1. ユーザーが `/package-add <パッケージ名>` を実行する（パッケージ名省略時はユーザーに確認する）
 2. `packages/<パッケージ名>/` が既に存在する場合は中止する
 3. `npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template/packages/package-a packages/<パッケージ名>` でテンプレートを展開する
-4. プレースホルダ（`__PACKAGE_NAME__`）をパッケージ名で置換する（対象: 全 `.md` ファイル）
-5. 作成したパッケージのパスをユーザーに通知する
+4. 作成したパッケージのパスをユーザーに通知する
 
 ## Template Source
 
@@ -29,4 +28,4 @@ npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template/packa
 ## Notes
 
 - 同名パッケージが既存の場合は中止する（上書き不可）
-- コピー後にプレースホルダが残っていないか確認する
+- コピー後は `README.md` と `CLAUDE.md` をパッケージ名に合わせて編集する

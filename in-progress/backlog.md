@@ -6,11 +6,14 @@
 > 完了が多くなったら backlog_old.md へ退避する。
 > 優先度は表示順。
 
-- rec-0014: `packages/template/docs/how-to-work.md` を新規作成
-- rec-0014: `packages/template/docs/architecture.md` の内容を充実させる
+- とりあえず、OKそうなので、実際のプロジェクトで使ってみる　
 - rec-0013: 仕組みの説明をどこに配置するか検討・実装
-- rec-0003: スキルのテンプレート参照の設計判断を完了させる
+- rec-0014: package の doc ファイル作成
+- rec-0015: backlogの役割と用途の定義
 - rec-0016:  `packages/readme.md` の内容を精査する
+
+2026/5/02
+- 済 rec-0003: スキルのテンプレート参照の設計判断を完了させる
 
 2026/4/28
 - 済 rec-0011: docs 記載方針の確定と `docs/` 更新
