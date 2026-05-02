@@ -1,26 +1,8 @@
 # package-a
 
-[このパッケージが何をするか、一言で]
+> このパッケージの役割を一言で記載してください
 
-## 使い方
+## 関連ドキュメント
 
-```ts
-import { foo } from 'package-a'
-
-foo()
-```
-
-## 依存関係
-
-| パッケージ | 理由 |
-|---|---|
-| package-b | [理由] |
-
-## 開発
-
-```bash
-pnpm --filter package-a dev
-pnpm --filter package-a test
-```
-
-仕様は [spec/](./spec/) を参照。
+- [CLAUDE.md](./CLAUDE.md) — このパッケージの開発方針
+- [docs/](./docs/) — 仕様・セットアップ
