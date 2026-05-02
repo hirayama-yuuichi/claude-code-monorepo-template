@@ -12,14 +12,14 @@ packages/<pkg>/          ← 実装とパッケージ固有情報
 
 ## Claude Code への出力ルール
 
-| 出力の種類 | 書く場所 |
-|---|---|
-| 新規アイデア | `in-progress/ideas.md` |
-| やること追加 | `in-progress/backlog.md` |
-| 横断的な計画変更 | `in-progress/plan.md` |
-| パッケージ固有の計画 | `packages/<pkg>/plan.md` |
-| 設計判断ログ | `in-progress/records/XXXX-*.md` |
-| アーキテクチャ変更 | `docs/architecture.md` |
+| 出力の種類 | 書く場所 | 書き方 |
+|---|---|---|
+| 新規アイデア | `in-progress/ideas.md` | |
+| やること追加 | `in-progress/backlog.md` | 「## 作業予定」セクションに追記。records の場合は `[rec-XXXX](./records/XXXX-タイトル.md)` 形式。完了したら `## YYYY/MM/DD` 見出し下に「済」付きで移動 |
+| 横断的な計画変更 | `in-progress/plan.md` | |
+| パッケージ固有の計画 | `packages/<pkg>/plan.md` | |
+| 設計判断ログ | `in-progress/records/XXXX-*.md` | |
+| アーキテクチャ変更 | `docs/architecture.md` | |
 
 ## 使用できるスキル
 
