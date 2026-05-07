@@ -21,18 +21,21 @@
 ### 1. 新プロジェクトのディレクトリを作成
 
 ```bash
-mkdir <プロジェクト名> && cd <プロジェクト名>
+mkdir <プロジェクト名>
+cd <プロジェクト名>
 ```
 
 ### 2. スキルのインストール（初回のみ）
 
-プロジェクトディレクトリ内で Claude Code を開き、以下を実行：
+**ターミナルで**以下を実行（Claude Code 起動前に行うこと）：
 
 ```bash
-! npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/skills .claude/skills
+npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/skills .claude/skills
 ```
 
 ### 3. プロジェクトの作成
+
+プロジェクトディレクトリで Claude Code を起動し、以下を実行：
 
 ```
 /monorepo-init
