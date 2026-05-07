@@ -18,7 +18,15 @@
 
 ## インストール
 
+### 1. スキルのインストール（初回のみ）
+
 Claude Code で以下を実行：
+
+```bash
+! npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/skills ~/.claude/skills/monorepo-template
+```
+
+### 2. プロジェクトの作成
 
 ```
 /monorepo-init

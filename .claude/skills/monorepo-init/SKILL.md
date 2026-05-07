@@ -15,7 +15,7 @@ origin: local
 1. ユーザーが `/monorepo-init` を実行する
 2. プロジェクト名をユーザーに確認する
 3. カレントディレクトリに既存ファイルがある場合は上書き確認を求めて中止する
-4. `npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/root <プロジェクト名>` を実行してテンプレートを展開する
+4. `npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template <プロジェクト名>` を実行してテンプレートを展開する
 5. プレースホルダ（`__PROJECT_NAME__`）をプロジェクト名で置換する（対象: 全 `.md` ファイル）
 6. `README.md` 冒頭にテンプレートリポジトリへの参照行を埋め込む
 7. 展開完了をユーザーに通知する
@@ -23,10 +23,10 @@ origin: local
 ## Template Source
 
 ```
-npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/root <プロジェクト名>
+npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template <プロジェクト名>
 ```
 
-- `.git/` を含まず `root/` の内容だけがフラットにコピーされる
+- `.git/` を含まず `template/` の内容だけがフラットにコピーされる
 - `_old/`、`plan*.md`、`*_review.md`、`*_proposal.md` はコピーされない
 
 ## README.md への参照行
