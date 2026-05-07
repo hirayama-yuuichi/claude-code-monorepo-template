@@ -1,4 +1,6 @@
 _old/
+*_review.md
+*_proposal.md
 *.code-workspace
 .claude/settings.local.json
 .DS_Store
