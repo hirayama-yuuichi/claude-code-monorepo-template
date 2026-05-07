@@ -29,7 +29,7 @@ mkdir <プロジェクト名> && cd <プロジェクト名>
 プロジェクトディレクトリ内で Claude Code を開き、以下を実行：
 
 ```bash
-! npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/skills .claude/skills/monorepo-template
+! npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/skills .claude/skills
 ```
 
 ### 3. プロジェクトの作成
