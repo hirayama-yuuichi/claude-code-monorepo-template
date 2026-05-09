@@ -1,5 +1,5 @@
 ---
-name: package-add
+name: sample-package-add
 description: 既存モノレポに新しいパッケージをテンプレートから追加する
 origin: local
 ---
@@ -12,18 +12,18 @@ origin: local
 
 ## How It Works
 
-1. ユーザーが `/package-add <パッケージ名>` を実行する（パッケージ名省略時はユーザーに確認する）
+1. ユーザーが `/sample-package-add <パッケージ名>` を実行する（パッケージ名省略時はユーザーに確認する）
 2. `packages/<パッケージ名>/` が既に存在する場合は中止する
-3. `npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template/packages/package-a packages/<パッケージ名>` でテンプレートを展開する
+3. `npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template/packages/sample-package-a packages/<パッケージ名>` でテンプレートを展開する
 4. 作成したパッケージのパスをユーザーに通知する
 
 ## Template Source
 
 ```
-npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template/packages/package-a packages/<パッケージ名>
+npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/template/packages/sample-package-a packages/<パッケージ名>
 ```
 
-- `.git/` を含まず `package-a/` の内容だけが展開される
+- `.git/` を含まず `sample-package-a/` の内容だけが展開される
 
 ## Notes
 
