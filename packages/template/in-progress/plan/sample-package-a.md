@@ -1,4 +1,4 @@
-# package-a 実装計画
+# sample-package-a 実装計画
 
 > このパッケージ内の話だけ書く。横断の話は [全体計画](../../in-progress/plan.md) を参照。
 

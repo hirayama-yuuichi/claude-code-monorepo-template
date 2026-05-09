@@ -33,6 +33,12 @@ cd <プロジェクト名>
 npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/skills .claude/skills
 ```
 
+または curl を使う場合：
+
+```bash
+mkdir -p .claude/skills && curl -fsSL https://github.com/hirayama-yuuichi/claude-code-monorepo-template/archive/refs/heads/main.tar.gz | tar -xz --strip-components=2 -C .claude/skills claude-code-monorepo-template-main/packages/skills
+```
+
 ### 3. プロジェクトの作成
 
 プロジェクトディレクトリで Claude Code を起動し、以下を実行：
@@ -62,7 +68,9 @@ in-progress/        ← 進行中のすべて
 ├── ideas.md        ← アイデアの記録
 ├── backlog.md      ← 作業リスト（優先度順）
 ├── records/        ← 設計判断ログ
-└── plan/           ← パッケージ横断の計画
+└── plan/           ← 初期計画
+   ├── plan.md         　　　← プロジェクト全体の計画
+   └── sample-package-a.md   ← パッケージごとの計画
 
 packages/           ← コードとパッケージ固有情報
 └── <pkg>/
@@ -73,11 +81,13 @@ packages/           ← コードとパッケージ固有情報
 
 ## アイデア管理フロー
 
-1. **アイデアを書く** — `in-progress/ideas.md`
-2. **やると決めたら** — `/records-add` で設計判断ログを作成
-3. **作業リストに追加** — `in-progress/backlog.md`
-4. **実装・docs 更新**
-5. **record のステータスを完了に更新**
+1. **プロジェクト全体としてやりたいことを書く** — `in-progress/plan/plan.md`
+2. **パッケージごとにやりたいことを書く** — `in-progress/plan/<パッケージ名>.md`
+3. **アイデアを書く** — `in-progress/ideas.md`
+4. **やると決めたら** — `/records-add` で設計判断ログを作成
+5. **作業リストに追加** — `in-progress/backlog.md`
+6. **実装・docs 更新**
+7. **record のステータスを完了に更新**
 
 判断に迷うときは `/critique` → `/propose` で批判と修正案を生成。
 

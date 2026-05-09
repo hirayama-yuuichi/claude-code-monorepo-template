@@ -6,7 +6,7 @@
 
 | パッケージ | 役割 |
 |---|---|
-| [package-a](./packages/package-a/) | [役割] |
+| [sample-package-a](./packages/sample-package-a/) | [役割] |
 | [package-b](./packages/package-b/) | [役割] |
 
 ## 最短の使い方
