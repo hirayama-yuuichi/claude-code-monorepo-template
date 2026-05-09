@@ -1,6 +1,6 @@
 ---
 name: records-add
-description: in-progress/records/ に 0001-xxx.md 形式で記録を新規作成する
+description: in-progress/records/ に XXXX-0-xxx.md 形式で記録を新規作成する。--parent で枝番採番も可能。
 origin: local
 ---
 
@@ -12,23 +12,36 @@ origin: local
 
 ## How It Works
 
+### `--parent` なし（新規採番）
+
 1. ユーザーが `/records-add <タイトル>` を実行する（タイトル省略時はユーザーに確認する）
-2. `in-progress/records/` の既存ファイルから次の連番を採番する（例: 0001, 0002 が存在する場合は 0003）
-3. `in-progress/records/XXXX-<タイトル>.md` を作成する
+2. `in-progress/records/` の既存ファイルのうち `XXXX-0-*.md` 形式（`_review.md`・`_proposal.md` サフィックスを除く）から連番 `XXXX` の最大値を取得し、+1 した値を次の連番とする
+3. `in-progress/records/XXXX-0-<タイトル>.md` を作成する
 4. 必須項目（背景・判断）が未記入の場合は保存前にユーザーに確認を求める
 5. 作成したファイルのパスをユーザーに通知する
 6. 決定事項に実装タスクが含まれる場合、CLAUDE.md のフォーマット仕様に従って `in-progress/backlog.md` に見出し1行で直接追記する（記録番号を付記）
 
+### `--parent <親パス>` あり（枝番採番）
+
+1. ユーザーが `/records-add --parent <親パス> <タイトル>` を実行する
+   - `<親パス>` 例：`0020-0`、`0020-0-1`（任意の深さを指定可能）
+2. `<親パス>-*.md` に該当するファイルが存在するか確認する
+   - 存在しない場合：「親ファイル `<親パス>-*.md` が見つかりません。先に親 record を作成するか、パスを確認してください」と通知して終了する
+3. `<親パス>-N-*.md`（`_review.md`・`_proposal.md` サフィックスを除く）の一覧から末尾枝番 `N` の最大値を取得し、`N + 1` を新しい枝番とする（一覧が空の場合は `1` から開始）
+4. `in-progress/records/<親パス>-{N+1}-<タイトル>.md` を作成する
+5. 手順 4〜6（通知・backlog 追記）は通常採番と同様
+
 ## Output
 
-- `in-progress/records/XXXX-<タイトル>.md` — 記録ファイル
+- `--parent` なし：`in-progress/records/XXXX-0-<タイトル>.md`
+- `--parent <親パス>` あり：`in-progress/records/<親パス>-{N+1}-<タイトル>.md`
 
 ## File Format
 
 ```markdown
 # 設計判断ログ
 
-## XXXX: <タイトル>
+## XXXX-0: <タイトル>
 
 - 日付: YYYY-MM-DD
 - 状態: 提案 | 議論中 | 採用 | 廃止
@@ -68,6 +81,8 @@ origin: local
 
 ## Notes
 
-- 連番が競合する場合は次の空き番号を自動で採番する
+- すべての record は `XXXX-0-タイトル.md` から始める（独立テーマも含む）
+- 枝番は 0〜9（同一レベルで最大10枝）。10枝を超える場合は record の粒度を見直す
+- 採番時に `_review.md`・`_proposal.md` サフィックスのファイルは除外する
 - `in-progress/records/` が存在しない場合は作成してから続行
 - 状態は `議論中` → `採用` / `廃止` に変化する。状態変更時はファイルを直接編集する
