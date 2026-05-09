@@ -36,9 +36,11 @@ npx degit hirayama-yuuichi/claude-code-monorepo-template/packages/skills .claude
 または curl を使う場合：
 
 ```bash
-mkdir -p .claude/skills
+
+mkdir -p .claude/
 curl -fsSL https://github.com/hirayama-yuuichi/claude-code-monorepo-template/archive/refs/heads/main.tar.gz \
-  | tar -xz --strip-components=2 -C .claude/skills claude-code-monorepo-template-main/packages/skills
+  | tar -xz --strip-components=2 -C .claude/ claude-code-monorepo-template-main/packages/skills
+
 ```
 
 ### 3. プロジェクトの作成
