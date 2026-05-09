@@ -5,5 +5,5 @@
 ## Global
 ### アイデアの内容　
 
-## package-a
-## package-b
+## sample-package-a
+## sample-package-b

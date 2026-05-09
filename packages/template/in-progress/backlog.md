@@ -13,12 +13,12 @@
 
 ## 作業予定
 
-- [rec-0001](./records/0001-タイトル.md): タスク説明
-- タスク2
-- タスク3
+- [rec-0001](./records/0001-sampleタイトル.md): タスク説明
+- sampleタスク2
+- sampleタスク3
 
 ## YYYY/MM/DD
-- 済 [rec-0001](./records/0001-タイトル.md): タスク説明
-- 済 タスク1
-- 済 タスク2
+- 済 [rec-0001](./records/0001-sampleタイトル.md): タスク説明
+- 済 sampleタスク1
+- 済 sampleタスク2
 
