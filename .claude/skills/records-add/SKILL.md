@@ -35,7 +35,7 @@ origin: local
 3. `in-progress/records/XXXX-000-<タイトル>.md` を作成する
 4. 必須項目（背景・判断）が未記入の場合は保存前にユーザーに確認を求める
 5. 作成したファイルのパスをユーザーに通知する
-6. 決定事項に実装タスクが含まれる場合、CLAUDE.md のフォーマット仕様に従って `in-progress/backlog.md` に見出し1行で直接追記する（記録番号を付記）
+6. CLAUDE.md のフォーマット仕様に従って `in-progress/backlog.md` に見出し1行で直接追記する（記録番号を付記）
 
 ### `--parent <XXXX-XYZ>` あり（枝番採番）
 

@@ -5,20 +5,10 @@
 > 全体の進捗状況と完了状態を管理する。<br>
 > 完了が多くなったら backlog_old.md へ退避する。<br>
 > 優先度は表示順。<br>
-> records へのリンクは `[rec-XXXX](./records/XXXX-タイトル.md)` 形式で記載。<br>
+> records へのリンクは `[rec-XXXX-000](./records/XXXX-000-タイトル.md)` 形式で記載。<br>
 
 ## 次回作業
 
-（人が記入）
-
 ## 作業予定
 
-- [rec-0001](./records/0001-sampleタイトル.md): タスク説明
-- sampleタスク2
-- sampleタスク3
-
 ## YYYY/MM/DD
-- 済 [rec-0001](./records/0001-sampleタイトル.md): タスク説明
-- 済 sampleタスク1
-- 済 sampleタスク2
-
