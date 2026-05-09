@@ -1,6 +1,6 @@
 ---
 name: records-add
-description: in-progress/records/ に XXXX-0-xxx.md 形式で記録を新規作成する。--parent で枝番採番も可能。
+description: in-progress/records/ に XXXX-000-xxx.md 形式で記録を新規作成する。--parent で枝番採番も可能。
 origin: local
 ---
 
@@ -10,38 +10,58 @@ origin: local
 
 設計判断・アーキテクチャ変更・方針決定・評価・整備記録など、`in-progress/records/` に残したい記録を追加するとき。
 
+## 採番形式
+
+3桁フラットエンコード：`XXXX-XYZ-タイトル.md`
+
+| 桁 | 意味 | 例 |
+|---|---|---|
+| X（百の位） | 第1階層の枝番 | `0020-000`（X=0）、`0020-100`（X=1） |
+| Y（十の位） | 第2階層の枝番 | `0020-010`（Y=1）、`0020-020`（Y=2） |
+| Z（一の位） | 第3階層の枝番 | `0020-011`（Z=1）、`0020-012`（Z=2） |
+
+- ルートは必ず `000`
+- ルートの子：Y を増やす（`010`, `020`, ...）
+- 子の子：Z を増やす（`011`, `012`, ...）
+- ルートの兄弟：X を増やす（`100`, `200`, ...）
+- 各桁は 0〜9（上限10枝/階層）
+
 ## How It Works
 
 ### `--parent` なし（新規採番）
 
 1. ユーザーが `/records-add <タイトル>` を実行する（タイトル省略時はユーザーに確認する）
-2. `in-progress/records/` の既存ファイルのうち `XXXX-0-*.md` 形式（`_review.md`・`_proposal.md` サフィックスを除く）から連番 `XXXX` の最大値を取得し、+1 した値を次の連番とする
-3. `in-progress/records/XXXX-0-<タイトル>.md` を作成する
+2. `in-progress/records/` の `XXXX-000-*.md`（`_review.md`・`_proposal.md` サフィックスを除く）から `XXXX` の最大値を取得し、+1 を次の連番とする
+3. `in-progress/records/XXXX-000-<タイトル>.md` を作成する
 4. 必須項目（背景・判断）が未記入の場合は保存前にユーザーに確認を求める
 5. 作成したファイルのパスをユーザーに通知する
 6. 決定事項に実装タスクが含まれる場合、CLAUDE.md のフォーマット仕様に従って `in-progress/backlog.md` に見出し1行で直接追記する（記録番号を付記）
 
-### `--parent <親パス>` あり（枝番採番）
+### `--parent <XXXX-XYZ>` あり（枝番採番）
 
-1. ユーザーが `/records-add --parent <親パス> <タイトル>` を実行する
-   - `<親パス>` 例：`0020-0`、`0020-0-1`（任意の深さを指定可能）
-2. `<親パス>-*.md` に該当するファイルが存在するか確認する
-   - 存在しない場合：「親ファイル `<親パス>-*.md` が見つかりません。先に親 record を作成するか、パスを確認してください」と通知して終了する
-3. `<親パス>-N-*.md`（`_review.md`・`_proposal.md` サフィックスを除く）の一覧から末尾枝番 `N` の最大値を取得し、`N + 1` を新しい枝番とする（一覧が空の場合は `1` から開始）
-4. `in-progress/records/<親パス>-{N+1}-<タイトル>.md` を作成する
-5. 手順 4〜6（通知・backlog 追記）は通常採番と同様
+1. ユーザーが `/records-add --parent <XXXX-XYZ> <タイトル>` を実行する
+2. 親ファイル `<XXXX-XYZ>-*.md` が存在するか確認する
+   - 存在しない場合：「親ファイル `<XXXX-XYZ>-*.md` が見つかりません」と通知して終了
+3. 親の枝番 `XYZ` から子の枝番を算出する：
+   - `X00`（ルート）→ 子は `X10`, `X20`, ... （Y を +1）
+   - `XY0`（Y≠0、深さ2）→ 子は `XY1`, `XY2`, ... （Z を +1）
+   - `XYZ`（Z≠0、深さ3）→ エラー「最大深さ3に達しています」
+4. 既存ファイルから次の空き枝番を採番する（`_review.md`・`_proposal.md` を除外）
+5. `in-progress/records/<XXXX-次の枝番>-<タイトル>.md` を作成する
+6. 手順 4〜6（通知・backlog 追記）は通常採番と同様
 
 ## Output
 
-- `--parent` なし：`in-progress/records/XXXX-0-<タイトル>.md`
-- `--parent <親パス>` あり：`in-progress/records/<親パス>-{N+1}-<タイトル>.md`
+- `--parent` なし：`in-progress/records/XXXX-000-<タイトル>.md`
+- `--parent XXXX-000` あり：`in-progress/records/XXXX-010-<タイトル>.md`（次の空き番）
+- `--parent XXXX-010` あり：`in-progress/records/XXXX-011-<タイトル>.md`（次の空き番）
 
 ## File Format
 
 ```markdown
 # 設計判断ログ
 
-## XXXX-0: <タイトル>
+## XXXX-000: <タイトル>
 
 - 日付: YYYY-MM-DD
 - 状態: 提案 | 議論中 | 採用 | 廃止
@@ -81,8 +101,6 @@ origin: local
 
 ## Notes
 
-- すべての record は `XXXX-0-タイトル.md` から始める（独立テーマも含む）
-- 枝番は 0〜9（同一レベルで最大10枝）。10枝を超える場合は record の粒度を見直す
 - 採番時に `_review.md`・`_proposal.md` サフィックスのファイルは除外する
 - `in-progress/records/` が存在しない場合は作成してから続行
 - 状態は `議論中` → `採用` / `廃止` に変化する。状態変更時はファイルを直接編集する

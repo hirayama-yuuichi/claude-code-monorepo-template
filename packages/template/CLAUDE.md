@@ -15,10 +15,10 @@ packages/<pkg>/          ← 実装とパッケージ固有情報
 | 出力の種類 | 書く場所 | 書き方 |
 |---|---|---|
 | 新規アイデア | `in-progress/ideas.md` | |
-| やること追加 | `in-progress/backlog.md` | 「## 作業予定」セクションに追記。records の場合は `[rec-XXXX-0](./records/XXXX-0-タイトル.md)` 形式。完了したら `## YYYY/MM/DD` 見出し下に「済」付きで移動 |
+| やること追加 | `in-progress/backlog.md` | 「## 作業予定」セクションに追記。records の場合は `[rec-XXXX-000](./records/XXXX-000-タイトル.md)` 形式。完了したら `## YYYY/MM/DD` 見出し下に「済」付きで移動 |
 | 横断的な計画変更 | `in-progress/plan.md` | |
 | パッケージ固有の計画 | `packages/<pkg>/plan.md` | |
-| 設計判断ログ | `in-progress/records/XXXX-0-*.md` | すべての record は `XXXX-0-タイトル.md` から始める。派生は `--parent` で枝番採番 |
+| 設計判断ログ | `in-progress/records/XXXX-000-*.md` | すべての record は `XXXX-000-タイトル.md` から始める。派生は `/records-add --parent XXXX-000` で枝番採番 |
 | アーキテクチャ変更 | `docs/architecture.md` | |
 
 ## 使用できるスキル
