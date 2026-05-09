@@ -10,10 +10,12 @@
 
 ## 作業予定
 
-- [rec-0019](./records/0019-recordsの枝番対応.md): records-add スキルの枝番オプション実装
 - [rec-0017-0 V1対応](./records/0017-0-実際のプロジェクトでの導入テスト.md): records追加時のbacklog記載漏れ対応（根本原因確認・スキル修正）
 - [rec-0017-0 V2対応](./records/0017-0-実際のプロジェクトでの導入テスト.md): サンプルコンテンツ設計の一括見直し
 - [rec-0017-0](./records/0017-0-実際のプロジェクトでの導入テスト.md): 未検証項目の実施（/monorepo-init 実動作・critique/propose ループ検証）
+
+## 2026/05/10
+- 済 [rec-0019](./records/0019-recordsの枝番対応.md): records-add スキルの枝番オプション実装
 
 ## 2026/05/09
 - 済 [rec-0018](./records/0018-packages配下のGitHub公開と利用.md): packages配下のGitHub公開と新規プロジェクトへの反映
